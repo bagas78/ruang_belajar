@@ -1,0 +1,11 @@
+img[alt="www.000webhost.com"] { display: none; }
+
+  p img {
+    width: 100%;
+    height: auto;
+  }
+
+  h2 img {
+    width: 100%;
+    height: auto;
+  }
