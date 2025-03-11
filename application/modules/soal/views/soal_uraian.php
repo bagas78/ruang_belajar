@@ -4,7 +4,7 @@ td {
 }
 </style>
 <div class="d-block" id="head-soal">
-	<div class="d-block" align="center">
+	<div class="d-block" align="center"> 
 		<h3><?php echo $soal->soal_uraian_nama ?></h3>
 		
 	</div>
@@ -24,7 +24,10 @@ td {
 		<?php foreach (unserialize($soal->soal_uraian_data) as $key => $var): ?>
 			<tr>
 				<td><p><?php echo $key ?>.</p></td>
-				<td><p><?php echo str_replace(PHP_EOL, "<br>", $var['pertanyaan'] )?></p></td>
+				<td>
+					<p><?php echo str_replace(PHP_EOL, "<br>", $var['pertanyaan'] )?></p>
+					<img <?=(@$var['gambar'] == '')? 'hidden':''?> src="<?=base_url('admin/assets/uraian/'.@$var['gambar'])?>" class="img img-thumbnail w-50 mb-3">
+				</td>
 			</tr>
 			<tr>
 				<td></td>

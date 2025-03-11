@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2023 at 04:03 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Waktu pembuatan: 11 Mar 2025 pada 14.04
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_admin_level`
+-- Struktur dari tabel `t_admin_level`
 --
 
 CREATE TABLE `t_admin_level` (
@@ -35,7 +35,7 @@ CREATE TABLE `t_admin_level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_admin_level`
+-- Dumping data untuk tabel `t_admin_level`
 --
 
 INSERT INTO `t_admin_level` (`level_id`, `level_nama`, `level_akses`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `t_admin_level` (`level_id`, `level_nama`, `level_akses`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_admin_user`
+-- Struktur dari tabel `t_admin_user`
 --
 
 CREATE TABLE `t_admin_user` (
@@ -59,7 +59,7 @@ CREATE TABLE `t_admin_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_admin_user`
+-- Dumping data untuk tabel `t_admin_user`
 --
 
 INSERT INTO `t_admin_user` (`user_id`, `user_nama`, `user_email`, `user_password`, `user_foto`, `level_id`) VALUES
@@ -68,7 +68,7 @@ INSERT INTO `t_admin_user` (`user_id`, `user_nama`, `user_email`, `user_password
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_materi`
+-- Struktur dari tabel `t_materi`
 --
 
 CREATE TABLE `t_materi` (
@@ -81,7 +81,7 @@ CREATE TABLE `t_materi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_materi`
+-- Dumping data untuk tabel `t_materi`
 --
 
 INSERT INTO `t_materi` (`materi_id`, `materi_judul`, `materi_foto`, `materi_post`, `materi_tanggal`, `materi_tanggal_update`) VALUES
@@ -96,7 +96,7 @@ INSERT INTO `t_materi` (`materi_id`, `materi_judul`, `materi_foto`, `materi_post
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_menu`
+-- Struktur dari tabel `t_menu`
 --
 
 CREATE TABLE `t_menu` (
@@ -107,7 +107,7 @@ CREATE TABLE `t_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_menu`
+-- Dumping data untuk tabel `t_menu`
 --
 
 INSERT INTO `t_menu` (`menu_id`, `menu_nama`, `menu_detail`, `menu_foto`) VALUES
@@ -120,7 +120,7 @@ INSERT INTO `t_menu` (`menu_id`, `menu_nama`, `menu_detail`, `menu_foto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_siswa`
+-- Struktur dari tabel `t_siswa`
 --
 
 CREATE TABLE `t_siswa` (
@@ -129,7 +129,7 @@ CREATE TABLE `t_siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_siswa`
+-- Dumping data untuk tabel `t_siswa`
 --
 
 INSERT INTO `t_siswa` (`siswa_id`, `siswa_nama`) VALUES
@@ -208,7 +208,7 @@ INSERT INTO `t_siswa` (`siswa_id`, `siswa_nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_soal`
+-- Struktur dari tabel `t_soal`
 --
 
 CREATE TABLE `t_soal` (
@@ -220,42 +220,41 @@ CREATE TABLE `t_soal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_soal`
+-- Dumping data untuk tabel `t_soal`
 --
 
 INSERT INTO `t_soal` (`soal_id`, `soal_nama`, `soal_data`, `soal_dibuat`, `soal_diperbarui`) VALUES
-(1, 'Soal latihan biologi [Part 1]', 'a:10:{i:1;a:6:{s:10:\"pertanyaan\";s:25:\"Rangka tersusun dari .. ?\";s:1:\"a\";s:17:\"Tulang dan daging\";s:1:\"b\";s:15:\"Tulang dan otot\";s:1:\"c\";s:16:\"Tulang dan kulit\";s:1:\"d\";s:16:\"Rangkaian tulang\";s:5:\"kunci\";s:1:\"d\";}i:2;a:6:{s:10:\"pertanyaan\";s:80:\"Alat indra yang paling peka untuk membedakan benda panas dan benda dingin adalah\";s:1:\"a\";s:6:\"Hidung\";s:1:\"b\";s:5:\"Kulit\";s:1:\"c\";s:4:\"Mata\";s:1:\"d\";s:7:\"Telinga\";s:5:\"kunci\";s:1:\"b\";}i:3;a:6:{s:10:\"pertanyaan\";s:31:\"Penghubung antar tulang disebut\";s:1:\"a\";s:4:\"Otot\";s:1:\"b\";s:5:\"Sendi\";s:1:\"c\";s:6:\"Daging\";s:1:\"d\";s:6:\"Rangka\";s:5:\"kunci\";s:1:\"b\";}i:4;a:6:{s:10:\"pertanyaan\";s:44:\"Rangsangan yang dapat diterima hidung berupa\";s:1:\"a\";s:7:\"Getaran\";s:1:\"b\";s:7:\"Larutan\";s:1:\"c\";s:3:\"Bau\";s:1:\"d\";s:6:\"Cahaya\";s:5:\"kunci\";s:1:\"c\";}i:5;a:6:{s:10:\"pertanyaan\";s:35:\"Alat indra bagi tubuh berguna untuk\";s:1:\"a\";s:27:\"Mengenal keadaan luar tubuh\";s:1:\"b\";s:22:\"Melindungi organ tubuh\";s:1:\"c\";s:16:\"Menguatkan tubuh\";s:1:\"d\";s:23:\"Mengetahui posisi tubuh\";s:5:\"kunci\";s:1:\"a\";}i:6;a:6:{s:10:\"pertanyaan\";s:48:\"Daun kebanyakan berwarna hijau karena mengandung\";s:1:\"a\";s:7:\"Oksigen\";s:1:\"b\";s:8:\"Krolofil\";s:1:\"c\";s:3:\"Air\";s:1:\"d\";s:14:\"Karbondioksida\";s:5:\"kunci\";s:1:\"b\";}i:7;a:6:{s:10:\"pertanyaan\";s:76:\"Bagian tumbuhan yang berfungsi mencari air dan zat hara didalam tanah adalah\";s:1:\"a\";s:4:\"Daun\";s:1:\"b\";s:6:\"Batang\";s:1:\"c\";s:5:\"Bunga\";s:1:\"d\";s:4:\"Akar\";s:5:\"kunci\";s:1:\"d\";}i:8;a:6:{s:10:\"pertanyaan\";s:161:\"Perhatikan fungsi-fungsi berikut :\r\nA. Tempat memasak makanan\r\nB. Sebagai alat pernapasan\r\nC. Tempat berlangsungnya proses penguapan\r\nD. Menyerap air dalam tanah\";s:1:\"a\";s:7:\"1 dan 2\";s:1:\"b\";s:7:\"1 dan 3\";s:1:\"c\";s:10:\"1, 2 dan 3\";s:1:\"d\";s:13:\"1, 2, 3 dan 4\";s:5:\"kunci\";s:1:\"c\";}i:9;a:6:{s:10:\"pertanyaan\";s:78:\"Bagian tumbuhan yang berfungsi sebagai alat transportasi atau pengankut adalah\";s:1:\"a\";s:6:\"Batang\";s:1:\"b\";s:4:\"Akar\";s:1:\"c\";s:4:\"Daun\";s:1:\"d\";s:5:\"Bunga\";s:5:\"kunci\";s:1:\"a\";}i:10;a:6:{s:10:\"pertanyaan\";s:23:\"Daun selalu tumbuh dari\";s:1:\"a\";s:6:\"Batang\";s:1:\"b\";s:4:\"Akar\";s:1:\"c\";s:5:\"Bunga\";s:1:\"d\";s:4:\"Biji\";s:5:\"kunci\";s:1:\"a\";}}', '2019-07-02', '2023-12-07'),
+(1, 'Soal latihan biologi [Part 1]', 'a:10:{i:1;a:11:{s:10:\"pertanyaan\";s:25:\"Rangka tersusun dari .. ?\";s:6:\"gambar\";s:37:\"807ff66ead150da18dbacc82b8bf2a86.jpeg\";s:1:\"a\";s:17:\"Tulang dan daging\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:15:\"Tulang dan otot\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:16:\"Tulang dan kulit\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:16:\"Rangkaian tulang\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"d\";}i:2;a:11:{s:10:\"pertanyaan\";s:80:\"Alat indra yang paling peka untuk membedakan benda panas dan benda dingin adalah\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:6:\"Hidung\";s:8:\"gambar_a\";s:37:\"014ead421eb0c89d5149d5d77a42f193.jpeg\";s:1:\"b\";s:5:\"Kulit\";s:8:\"gambar_b\";s:37:\"9267516c729067c65473692527a5b24d.jpeg\";s:1:\"c\";s:4:\"Mata\";s:8:\"gambar_c\";s:37:\"3a6aee2ca7b8367970a6bf0c52d7120b.jpeg\";s:1:\"d\";s:7:\"Telinga\";s:8:\"gambar_d\";s:37:\"b5b3a09ad08cd36e76f6ddabfce96f85.jpeg\";s:5:\"kunci\";s:1:\"b\";}i:3;a:11:{s:10:\"pertanyaan\";s:31:\"Penghubung antar tulang disebut\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:4:\"Otot\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:5:\"Sendi\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:6:\"Daging\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:6:\"Rangka\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"b\";}i:4;a:11:{s:10:\"pertanyaan\";s:44:\"Rangsangan yang dapat diterima hidung berupa\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:7:\"Getaran\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:7:\"Larutan\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:3:\"Bau\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:6:\"Cahaya\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"c\";}i:5;a:11:{s:10:\"pertanyaan\";s:35:\"Alat indra bagi tubuh berguna untuk\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:27:\"Mengenal keadaan luar tubuh\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:22:\"Melindungi organ tubuh\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:16:\"Menguatkan tubuh\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:23:\"Mengetahui posisi tubuh\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"a\";}i:6;a:11:{s:10:\"pertanyaan\";s:48:\"Daun kebanyakan berwarna hijau karena mengandung\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:7:\"Oksigen\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:8:\"Krolofil\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:3:\"Air\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:14:\"Karbondioksida\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"b\";}i:7;a:11:{s:10:\"pertanyaan\";s:76:\"Bagian tumbuhan yang berfungsi mencari air dan zat hara didalam tanah adalah\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:4:\"Daun\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:6:\"Batang\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:5:\"Bunga\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:4:\"Akar\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"d\";}i:8;a:11:{s:10:\"pertanyaan\";s:161:\"Perhatikan fungsi-fungsi berikut :\r\nA. Tempat memasak makanan\r\nB. Sebagai alat pernapasan\r\nC. Tempat berlangsungnya proses penguapan\r\nD. Menyerap air dalam tanah\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:7:\"1 dan 2\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:7:\"1 dan 3\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:10:\"1, 2 dan 3\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:13:\"1, 2, 3 dan 4\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"c\";}i:9;a:11:{s:10:\"pertanyaan\";s:78:\"Bagian tumbuhan yang berfungsi sebagai alat transportasi atau pengankut adalah\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:6:\"Batang\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:4:\"Akar\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:4:\"Daun\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:5:\"Bunga\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"a\";}i:10;a:11:{s:10:\"pertanyaan\";s:23:\"Daun selalu tumbuh dari\";s:6:\"gambar\";s:0:\"\";s:1:\"a\";s:6:\"Batang\";s:8:\"gambar_a\";s:0:\"\";s:1:\"b\";s:4:\"Akar\";s:8:\"gambar_b\";s:0:\"\";s:1:\"c\";s:5:\"Bunga\";s:8:\"gambar_c\";s:0:\"\";s:1:\"d\";s:4:\"Biji\";s:8:\"gambar_d\";s:0:\"\";s:5:\"kunci\";s:1:\"a\";}}', '2019-07-02', '2025-03-11'),
 (2, 'Soal latihan biologi [Part 2]', 'a:10:{i:1;a:6:{s:10:\"pertanyaan\";s:44:\"Lebah mengambil . . . . .yang ada ditumbuhan\";s:1:\"a\";s:5:\"Bunga\";s:1:\"b\";s:5:\"Putik\";s:1:\"c\";s:11:\"Serbuk sari\";s:1:\"d\";s:6:\"Nektar\";s:5:\"kunci\";s:1:\"d\";}i:2;a:6:{s:10:\"pertanyaan\";s:65:\"Dibawah ini yang merupakan salah satu makanan burung elang adalah\";s:1:\"a\";s:5:\"Badak\";s:1:\"b\";s:7:\"Kelinci\";s:1:\"c\";s:6:\"Jagung\";s:1:\"d\";s:6:\"Papaya\";s:5:\"kunci\";s:1:\"b\";}i:3;a:6:{s:10:\"pertanyaan\";s:113:\"Walaupun bertubuh kecil laba-laba merupakan . . . . . karena memangsa hewan kecil lain yang terjebak disarangnya.\";s:1:\"a\";s:9:\"Karnivora\";s:1:\"b\";s:8:\"Omnivora\";s:1:\"c\";s:9:\"Herbivora\";s:1:\"d\";s:8:\"Ortovora\";s:5:\"kunci\";s:1:\"a\";}i:4;a:6:{s:10:\"pertanyaan\";s:82:\"Hewan yang bersumber makanannya berupa jagung, cacing, beras, dan ulat adalah. . .\";s:1:\"a\";s:6:\"Anjing\";s:1:\"b\";s:4:\"Ayam\";s:1:\"c\";s:15:\"Burung kakaktua\";s:1:\"d\";s:6:\"Kucing\";s:5:\"kunci\";s:1:\"b\";}i:5;a:6:{s:10:\"pertanyaan\";s:66:\"Fungsi taring dan cakar yang tajam pada kucing adalah untuk. . . .\";s:1:\"a\";s:19:\"Menangkap mangsanya\";s:1:\"b\";s:18:\"Mendapatkan nectar\";s:1:\"c\";s:17:\"Menyobek dedaunan\";s:1:\"d\";s:27:\"Melompat dari tempat tinggi\";s:5:\"kunci\";s:1:\"a\";}i:6;a:6:{s:10:\"pertanyaan\";s:76:\"Seluruh tahap pertumbuhan yang dialami makhluk hidup selama hidupnya disebut\";s:1:\"a\";s:12:\"Metamorfosis\";s:1:\"b\";s:16:\"Pengembangbiakan\";s:1:\"c\";s:11:\"Pertumbuhan\";s:1:\"d\";s:10:\"Daur hidup\";s:5:\"kunci\";s:1:\"d\";}i:7;a:6:{s:10:\"pertanyaan\";s:57:\"Hewan yang mengalami metamorfosis sempurna adalah. . . ..\";s:1:\"a\";s:8:\"Belalang\";s:1:\"b\";s:9:\"Kupu-kupu\";s:1:\"c\";s:5:\"Katak\";s:1:\"d\";s:6:\"Kecoak\";s:5:\"kunci\";s:1:\"b\";}i:8;a:6:{s:10:\"pertanyaan\";s:69:\"Hewan berikut ini yang mengalami metamorfosis tidak sempurna adalah. \";s:1:\"a\";s:9:\"Kupu-kupu\";s:1:\"b\";s:5:\"Lalat\";s:1:\"c\";s:6:\"Kecoak\";s:1:\"d\";s:5:\"Katak\";s:5:\"kunci\";s:1:\"c\";}i:9;a:6:{s:10:\"pertanyaan\";s:85:\"Serangga dibawah ini yang mengalami tahap kepompong (pupa) dalam daur hidupnya adalah\";s:1:\"a\";s:6:\"Kecoak\";s:1:\"b\";s:9:\"Laba-laba\";s:1:\"c\";s:6:\"Nyamuk\";s:1:\"d\";s:8:\"Belalang\";s:5:\"kunci\";s:1:\"c\";}i:10;a:6:{s:10:\"pertanyaan\";s:31:\"Telur kupu-kupu menetas menjadi\";s:1:\"a\";s:4:\"Ulat\";s:1:\"b\";s:9:\"Kepompong\";s:1:\"c\";s:6:\"Berudu\";s:1:\"d\";s:4:\"Pupa\";s:5:\"kunci\";s:1:\"a\";}}', '2019-07-02', '2019-07-02');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_soal_detail`
+-- Struktur dari tabel `t_soal_detail`
 --
 
 CREATE TABLE `t_soal_detail` (
   `soal_detail_id` int(11) NOT NULL,
   `soal_id` int(11) DEFAULT NULL,
-  `siswa_id` int(11) DEFAULT NULL,
+  `siswa_id` text DEFAULT NULL,
   `nilai_siswa` text DEFAULT NULL,
   `soal_detail_data` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_soal_detail`
+-- Dumping data untuk tabel `t_soal_detail`
 --
 
 INSERT INTO `t_soal_detail` (`soal_detail_id`, `soal_id`, `siswa_id`, `nilai_siswa`, `soal_detail_data`) VALUES
-(1, 1, 12311111, '90', 'a:10:{i:1;s:1:\"d\";i:2;s:1:\"b\";i:3;s:1:\"b\";i:4;s:1:\"c\";i:5;s:1:\"a\";i:6;s:1:\"b\";i:7;s:1:\"d\";i:8;s:1:\"d\";i:9;s:1:\"a\";i:10;s:1:\"a\";}'),
-(2, 1, 12311101, '70', 'a:10:{i:1;s:1:\"d\";i:2;s:1:\"b\";i:3;s:1:\"b\";i:4;s:1:\"c\";i:5;s:1:\"c\";i:6;s:1:\"b\";i:7;s:1:\"d\";i:8;s:1:\"d\";i:9;s:1:\"a\";i:10;s:1:\"d\";}'),
-(3, 1, 12311112, '30', 'a:10:{i:1;s:1:\"c\";i:2;s:1:\"c\";i:3;s:1:\"a\";i:4;s:1:\"a\";i:5;s:1:\"a\";i:6;s:1:\"a\";i:7;s:1:\"a\";i:8;s:1:\"a\";i:9;s:1:\"a\";i:10;s:1:\"a\";}'),
-(4, 1, 12311115, '40', 'a:10:{i:1;s:1:\"a\";i:2;s:1:\"c\";i:3;s:1:\"c\";i:4;s:1:\"c\";i:5;s:1:\"a\";i:6;s:1:\"b\";i:7;s:1:\"b\";i:8;s:1:\"c\";i:9;s:1:\"c\";i:10;s:1:\"d\";}'),
-(5, 1, 12311110, '30', 'a:10:{i:1;s:1:\"a\";i:2;s:1:\"a\";i:3;s:1:\"b\";i:4;s:1:\"c\";i:5;s:1:\"d\";i:6;s:1:\"b\";i:7;s:1:\"a\";i:8;s:1:\"a\";i:9;s:1:\"c\";i:10;s:1:\"b\";}');
+(1, 1, '12311111', '90', 'a:10:{i:1;s:1:\"d\";i:2;s:1:\"b\";i:3;s:1:\"b\";i:4;s:1:\"c\";i:5;s:1:\"a\";i:6;s:1:\"b\";i:7;s:1:\"d\";i:8;s:1:\"d\";i:9;s:1:\"a\";i:10;s:1:\"a\";}'),
+(3, 1, '12311112', '30', 'a:10:{i:1;s:1:\"c\";i:2;s:1:\"c\";i:3;s:1:\"a\";i:4;s:1:\"a\";i:5;s:1:\"a\";i:6;s:1:\"a\";i:7;s:1:\"a\";i:8;s:1:\"a\";i:9;s:1:\"a\";i:10;s:1:\"a\";}'),
+(4, 1, '12311115', '40', 'a:10:{i:1;s:1:\"a\";i:2;s:1:\"c\";i:3;s:1:\"c\";i:4;s:1:\"c\";i:5;s:1:\"a\";i:6;s:1:\"b\";i:7;s:1:\"b\";i:8;s:1:\"c\";i:9;s:1:\"c\";i:10;s:1:\"d\";}'),
+(5, 1, '12311110', '30', 'a:10:{i:1;s:1:\"a\";i:2;s:1:\"a\";i:3;s:1:\"b\";i:4;s:1:\"c\";i:5;s:1:\"d\";i:6;s:1:\"b\";i:7;s:1:\"a\";i:8;s:1:\"a\";i:9;s:1:\"c\";i:10;s:1:\"b\";}');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_soal_uraian`
+-- Struktur dari tabel `t_soal_uraian`
 --
 
 CREATE TABLE `t_soal_uraian` (
@@ -267,17 +266,17 @@ CREATE TABLE `t_soal_uraian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_soal_uraian`
+-- Dumping data untuk tabel `t_soal_uraian`
 --
 
 INSERT INTO `t_soal_uraian` (`soal_uraian_id`, `soal_uraian_nama`, `soal_uraian_data`, `soal_uraian_dibuat`, `soal_uraian_diperbarui`) VALUES
-(1, 'Soal Uraian', 'a:10:{i:1;a:1:{s:10:\"pertanyaan\";s:25:\"Rangka tersusun dari .. ?\";}i:2;a:1:{s:10:\"pertanyaan\";s:80:\"Alat indra yang paling peka untuk membedakan benda panas dan benda dingin adalah\";}i:3;a:1:{s:10:\"pertanyaan\";s:31:\"Penghubung antar tulang disebut\";}i:4;a:1:{s:10:\"pertanyaan\";s:44:\"Rangsangan yang dapat diterima hidung berupa\";}i:5;a:1:{s:10:\"pertanyaan\";s:35:\"Alat indra bagi tubuh berguna untuk\";}i:6;a:1:{s:10:\"pertanyaan\";s:48:\"Daun kebanyakan berwarna hijau karena mengandung\";}i:7;a:1:{s:10:\"pertanyaan\";s:76:\"Bagian tumbuhan yang berfungsi mencari air dan zat hara didalam tanah adalah\";}i:8;a:1:{s:10:\"pertanyaan\";s:161:\"Perhatikan fungsi-fungsi berikut :\r\nA. Tempat memasak makanan\r\nB. Sebagai alat pernapasan\r\nC. Tempat berlangsungnya proses penguapan\r\nD. Menyerap air dalam tanah\";}i:9;a:1:{s:10:\"pertanyaan\";s:78:\"Bagian tumbuhan yang berfungsi sebagai alat transportasi atau pengankut adalah\";}i:10;a:1:{s:10:\"pertanyaan\";s:23:\"Daun selalu tumbuh dari\";}}', '2019-07-20 10:23:22', '2019-07-20 12:10:53'),
+(1, 'Soal Uraian', 'a:10:{i:1;a:2:{s:10:\"pertanyaan\";s:25:\"Rangka tersusun dari .. ?\";s:6:\"gambar\";s:0:\"\";}i:2;a:2:{s:10:\"pertanyaan\";s:80:\"Alat indra yang paling peka untuk membedakan benda panas dan benda dingin adalah\";s:6:\"gambar\";s:0:\"\";}i:3;a:2:{s:10:\"pertanyaan\";s:31:\"Penghubung antar tulang disebut\";s:6:\"gambar\";s:0:\"\";}i:4;a:2:{s:10:\"pertanyaan\";s:44:\"Rangsangan yang dapat diterima hidung berupa\";s:6:\"gambar\";s:0:\"\";}i:5;a:2:{s:10:\"pertanyaan\";s:35:\"Alat indra bagi tubuh berguna untuk\";s:6:\"gambar\";s:0:\"\";}i:6;a:2:{s:10:\"pertanyaan\";s:48:\"Daun kebanyakan berwarna hijau karena mengandung\";s:6:\"gambar\";s:37:\"41a576224e4df1d2f145e2d6abdfd587.jpeg\";}i:7;a:2:{s:10:\"pertanyaan\";s:76:\"Bagian tumbuhan yang berfungsi mencari air dan zat hara didalam tanah adalah\";s:6:\"gambar\";s:0:\"\";}i:8;a:2:{s:10:\"pertanyaan\";s:161:\"Perhatikan fungsi-fungsi berikut :\r\nA. Tempat memasak makanan\r\nB. Sebagai alat pernapasan\r\nC. Tempat berlangsungnya proses penguapan\r\nD. Menyerap air dalam tanah\";s:6:\"gambar\";s:0:\"\";}i:9;a:2:{s:10:\"pertanyaan\";s:78:\"Bagian tumbuhan yang berfungsi sebagai alat transportasi atau pengankut adalah\";s:6:\"gambar\";s:0:\"\";}i:10;a:2:{s:10:\"pertanyaan\";s:23:\"Daun selalu tumbuh dari\";s:6:\"gambar\";s:0:\"\";}}', '2019-07-20 10:23:22', '2025-03-11 12:22:51'),
 (2, 'Soal 2', 'a:10:{i:1;a:1:{s:10:\"pertanyaan\";s:6:\"Soal a\";}i:2;a:1:{s:10:\"pertanyaan\";s:6:\"Soal b\";}i:3;a:1:{s:10:\"pertanyaan\";s:6:\"Soal c\";}i:4;a:1:{s:10:\"pertanyaan\";s:6:\"Soal d\";}i:5;a:1:{s:10:\"pertanyaan\";s:6:\"Soal e\";}i:6;a:1:{s:10:\"pertanyaan\";s:6:\"Soal f\";}i:7;a:1:{s:10:\"pertanyaan\";s:6:\"Soal g\";}i:8;a:1:{s:10:\"pertanyaan\";s:6:\"Soal h\";}i:9;a:1:{s:10:\"pertanyaan\";s:6:\"Soal i\";}i:10;a:1:{s:10:\"pertanyaan\";s:6:\"Soal j\";}}', '2019-07-20 10:56:56', '2019-07-20 10:57:09');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_soal_uraian_detail`
+-- Struktur dari tabel `t_soal_uraian_detail`
 --
 
 CREATE TABLE `t_soal_uraian_detail` (
@@ -291,7 +290,7 @@ CREATE TABLE `t_soal_uraian_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_statistik`
+-- Struktur dari tabel `t_statistik`
 --
 
 CREATE TABLE `t_statistik` (
@@ -302,17 +301,18 @@ CREATE TABLE `t_statistik` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t_statistik`
+-- Dumping data untuk tabel `t_statistik`
 --
 
 INSERT INTO `t_statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('127.0.0.1', '2019-10-03', 76, '1570120889'),
-('127.0.0.1', '2023-12-07', 3, '1701918080');
+('127.0.0.1', '2023-12-07', 3, '1701918080'),
+('127.0.0.1', '2025-03-11', 10, '1741697980');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_text`
+-- Struktur dari tabel `t_text`
 --
 
 CREATE TABLE `t_text` (
@@ -321,7 +321,7 @@ CREATE TABLE `t_text` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `t_text`
+-- Dumping data untuk tabel `t_text`
 --
 
 INSERT INTO `t_text` (`text_banner`, `text_author`) VALUES
@@ -330,8 +330,8 @@ INSERT INTO `t_text` (`text_banner`, `text_author`) VALUES
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `v_last_work`
--- (See below for the actual view)
+-- Stand-in struktur untuk tampilan `v_last_work`
+-- (Lihat di bawah untuk tampilan aktual)
 --
 CREATE TABLE `v_last_work` (
 `siswa_id` int(11)
@@ -346,8 +346,8 @@ CREATE TABLE `v_last_work` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `v_last_work_uraian`
--- (See below for the actual view)
+-- Stand-in struktur untuk tampilan `v_last_work_uraian`
+-- (Lihat di bawah untuk tampilan aktual)
 --
 CREATE TABLE `v_last_work_uraian` (
 `soal_uraian_id` int(11)
@@ -363,8 +363,8 @@ CREATE TABLE `v_last_work_uraian` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `v_soal`
--- (See below for the actual view)
+-- Stand-in struktur untuk tampilan `v_soal`
+-- (Lihat di bawah untuk tampilan aktual)
 --
 CREATE TABLE `v_soal` (
 `soal` varchar(13)
@@ -376,8 +376,8 @@ CREATE TABLE `v_soal` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `v_user_level`
--- (See below for the actual view)
+-- Stand-in struktur untuk tampilan `v_user_level`
+-- (Lihat di bawah untuk tampilan aktual)
 --
 CREATE TABLE `v_user_level` (
 `user_id` int(11)
@@ -393,145 +393,145 @@ CREATE TABLE `v_user_level` (
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_last_work`
+-- Struktur untuk view `v_last_work`
 --
 DROP TABLE IF EXISTS `v_last_work`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_last_work`  AS  select `t_siswa`.`siswa_id` AS `siswa_id`,`t_siswa`.`siswa_nama` AS `siswa_nama`,`t_soal`.`soal_id` AS `soal_id`,`t_soal`.`soal_nama` AS `soal_nama`,`t_soal_detail`.`nilai_siswa` AS `nilai_siswa`,`t_soal_detail`.`soal_detail_data` AS `jawaban_siswa`,`t_soal`.`soal_data` AS `soal_data` from ((`t_siswa` join `t_soal_detail` on(`t_soal_detail`.`siswa_id` = `t_siswa`.`siswa_id`)) join `t_soal` on(`t_soal_detail`.`soal_id` = `t_soal`.`soal_id`)) ;
+CREATE VIEW `v_last_work`  AS  select `t_siswa`.`siswa_id` AS `siswa_id`,`t_siswa`.`siswa_nama` AS `siswa_nama`,`t_soal`.`soal_id` AS `soal_id`,`t_soal`.`soal_nama` AS `soal_nama`,`t_soal_detail`.`nilai_siswa` AS `nilai_siswa`,`t_soal_detail`.`soal_detail_data` AS `jawaban_siswa`,`t_soal`.`soal_data` AS `soal_data` from ((`t_siswa` join `t_soal_detail` on(`t_soal_detail`.`siswa_id` = `t_siswa`.`siswa_id`)) join `t_soal` on(`t_soal_detail`.`soal_id` = `t_soal`.`soal_id`)) ;
 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_last_work_uraian`
+-- Struktur untuk view `v_last_work_uraian`
 --
 DROP TABLE IF EXISTS `v_last_work_uraian`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_last_work_uraian`  AS  select `t_soal_uraian`.`soal_uraian_id` AS `soal_uraian_id`,`t_soal_uraian`.`soal_uraian_nama` AS `soal_uraian_nama`,`t_soal_uraian`.`soal_uraian_data` AS `soal_uraian_data`,`t_soal_uraian_detail`.`soal_uraian_detail_id` AS `soal_uraian_detail_id`,`t_soal_uraian_detail`.`siswa_id` AS `siswa_id`,`t_soal_uraian_detail`.`nilai_siswa` AS `nilai_siswa`,`t_soal_uraian_detail`.`soal_uraian_detail_data` AS `soal_uraian_detail_data`,`t_siswa`.`siswa_nama` AS `siswa_nama` from ((`t_soal_uraian_detail` join `t_soal_uraian` on(`t_soal_uraian`.`soal_uraian_id` = `t_soal_uraian_detail`.`soal_uraian_id`)) join `t_siswa` on(`t_soal_uraian_detail`.`siswa_id` = `t_siswa`.`siswa_id`)) ;
+CREATE VIEW `v_last_work_uraian`  AS  select `t_soal_uraian`.`soal_uraian_id` AS `soal_uraian_id`,`t_soal_uraian`.`soal_uraian_nama` AS `soal_uraian_nama`,`t_soal_uraian`.`soal_uraian_data` AS `soal_uraian_data`,`t_soal_uraian_detail`.`soal_uraian_detail_id` AS `soal_uraian_detail_id`,`t_soal_uraian_detail`.`siswa_id` AS `siswa_id`,`t_soal_uraian_detail`.`nilai_siswa` AS `nilai_siswa`,`t_soal_uraian_detail`.`soal_uraian_detail_data` AS `soal_uraian_detail_data`,`t_siswa`.`siswa_nama` AS `siswa_nama` from ((`t_soal_uraian_detail` join `t_soal_uraian` on(`t_soal_uraian`.`soal_uraian_id` = `t_soal_uraian_detail`.`soal_uraian_id`)) join `t_siswa` on(`t_soal_uraian_detail`.`siswa_id` = `t_siswa`.`siswa_id`)) ;
 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_soal`
+-- Struktur untuk view `v_soal`
 --
 DROP TABLE IF EXISTS `v_soal`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_soal`  AS  select 'Pilihan Ganda' AS `soal`,'1' AS `id`,`t_soal`.`soal_id` AS `soal_id`,`t_soal`.`soal_nama` AS `soal_nama` from `t_soal` union select 'Uraian' AS `soal`,'2' AS `id`,`t_soal_uraian`.`soal_uraian_id` AS `soal_uraian_id`,`t_soal_uraian`.`soal_uraian_nama` AS `soal_uraian_nama` from `t_soal_uraian` ;
+CREATE VIEW `v_soal`  AS  select 'Pilihan Ganda' AS `soal`,'1' AS `id`,`t_soal`.`soal_id` AS `soal_id`,`t_soal`.`soal_nama` AS `soal_nama` from `t_soal` union select 'Uraian' AS `soal`,'2' AS `id`,`t_soal_uraian`.`soal_uraian_id` AS `soal_uraian_id`,`t_soal_uraian`.`soal_uraian_nama` AS `soal_uraian_nama` from `t_soal_uraian` ;
 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_user_level`
+-- Struktur untuk view `v_user_level`
 --
 DROP TABLE IF EXISTS `v_user_level`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_user_level`  AS  select `t_admin_user`.`user_id` AS `user_id`,`t_admin_user`.`user_nama` AS `user_nama`,`t_admin_user`.`user_email` AS `user_email`,`t_admin_user`.`user_password` AS `user_password`,`t_admin_user`.`user_foto` AS `user_foto`,`t_admin_level`.`level_id` AS `level_id`,`t_admin_level`.`level_nama` AS `level_nama`,`t_admin_level`.`level_akses` AS `level_akses` from (`t_admin_user` join `t_admin_level` on(`t_admin_user`.`level_id` = `t_admin_level`.`level_id`)) ;
+CREATE VIEW `v_user_level`  AS  select `t_admin_user`.`user_id` AS `user_id`,`t_admin_user`.`user_nama` AS `user_nama`,`t_admin_user`.`user_email` AS `user_email`,`t_admin_user`.`user_password` AS `user_password`,`t_admin_user`.`user_foto` AS `user_foto`,`t_admin_level`.`level_id` AS `level_id`,`t_admin_level`.`level_nama` AS `level_nama`,`t_admin_level`.`level_akses` AS `level_akses` from (`t_admin_user` join `t_admin_level` on(`t_admin_user`.`level_id` = `t_admin_level`.`level_id`)) ;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `t_admin_level`
+-- Indeks untuk tabel `t_admin_level`
 --
 ALTER TABLE `t_admin_level`
   ADD PRIMARY KEY (`level_id`) USING BTREE;
 
 --
--- Indexes for table `t_admin_user`
+-- Indeks untuk tabel `t_admin_user`
 --
 ALTER TABLE `t_admin_user`
   ADD PRIMARY KEY (`user_id`) USING BTREE;
 
 --
--- Indexes for table `t_materi`
+-- Indeks untuk tabel `t_materi`
 --
 ALTER TABLE `t_materi`
   ADD PRIMARY KEY (`materi_id`) USING BTREE;
 
 --
--- Indexes for table `t_menu`
+-- Indeks untuk tabel `t_menu`
 --
 ALTER TABLE `t_menu`
   ADD PRIMARY KEY (`menu_id`) USING BTREE;
 
 --
--- Indexes for table `t_siswa`
+-- Indeks untuk tabel `t_siswa`
 --
 ALTER TABLE `t_siswa`
   ADD PRIMARY KEY (`siswa_id`) USING BTREE;
 
 --
--- Indexes for table `t_soal`
+-- Indeks untuk tabel `t_soal`
 --
 ALTER TABLE `t_soal`
   ADD PRIMARY KEY (`soal_id`) USING BTREE;
 
 --
--- Indexes for table `t_soal_detail`
+-- Indeks untuk tabel `t_soal_detail`
 --
 ALTER TABLE `t_soal_detail`
   ADD PRIMARY KEY (`soal_detail_id`) USING BTREE;
 
 --
--- Indexes for table `t_soal_uraian`
+-- Indeks untuk tabel `t_soal_uraian`
 --
 ALTER TABLE `t_soal_uraian`
   ADD PRIMARY KEY (`soal_uraian_id`) USING BTREE;
 
 --
--- Indexes for table `t_soal_uraian_detail`
+-- Indeks untuk tabel `t_soal_uraian_detail`
 --
 ALTER TABLE `t_soal_uraian_detail`
   ADD PRIMARY KEY (`soal_uraian_detail_id`) USING BTREE;
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `t_admin_level`
+-- AUTO_INCREMENT untuk tabel `t_admin_level`
 --
 ALTER TABLE `t_admin_level`
   MODIFY `level_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `t_admin_user`
+-- AUTO_INCREMENT untuk tabel `t_admin_user`
 --
 ALTER TABLE `t_admin_user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `t_menu`
+-- AUTO_INCREMENT untuk tabel `t_menu`
 --
 ALTER TABLE `t_menu`
   MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `t_siswa`
+-- AUTO_INCREMENT untuk tabel `t_siswa`
 --
 ALTER TABLE `t_siswa`
   MODIFY `siswa_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12311172;
 
 --
--- AUTO_INCREMENT for table `t_soal`
+-- AUTO_INCREMENT untuk tabel `t_soal`
 --
 ALTER TABLE `t_soal`
   MODIFY `soal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `t_soal_detail`
+-- AUTO_INCREMENT untuk tabel `t_soal_detail`
 --
 ALTER TABLE `t_soal_detail`
   MODIFY `soal_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `t_soal_uraian`
+-- AUTO_INCREMENT untuk tabel `t_soal_uraian`
 --
 ALTER TABLE `t_soal_uraian`
   MODIFY `soal_uraian_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `t_soal_uraian_detail`
+-- AUTO_INCREMENT untuk tabel `t_soal_uraian_detail`
 --
 ALTER TABLE `t_soal_uraian_detail`
   MODIFY `soal_uraian_detail_id` int(11) NOT NULL AUTO_INCREMENT;

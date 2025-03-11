@@ -29,8 +29,8 @@
   </style>
 
   <!--Main layout-->
-  <main class="mt-5 pt-5">
-    <div class="container">
+  <main class="mt-5 pt-3">
+    <div class="container-fluid">
 
       <!--Section: Post-->
       <section class="mt-4">

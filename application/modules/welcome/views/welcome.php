@@ -8,7 +8,7 @@
   </style>
   <!--Main layout-->
   <main class="mt-5 pt-5">
-    <div class="container">
+    <div class="container-fluid">
 
       <!--Section: Jumbotron-->
       <section class="card wow fadeIn" style="background-image: url(<?php echo base_url('admin/assets/uploads/home-banner.jpg?'.time()) ?>); background-size: cover;">

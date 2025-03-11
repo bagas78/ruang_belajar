@@ -12,7 +12,7 @@ class Soal extends CI_Controller
 	}
 
 	function index() {
-		$this->soal();
+		$this->soal(); 
 	}
 
 	function soal() {
@@ -80,6 +80,9 @@ class Soal extends CI_Controller
 		} else {
 			$data['soal'] = $this->m->get_soal($soal_id);
 			$this->template->view('edit', $data);
+
+			// echo '<pre>';
+			// print_r($data['soal']['soal_data']);
 		}
 	}
 
@@ -102,11 +105,102 @@ class Soal extends CI_Controller
 		}
 	}
 
+	function upload($x){
+
+		//target folder upload
+		switch ($x) {
+
+			case 'pilihan': 
+				$path = './assets/pilihan_ganda/';
+				break;
+			case 'uraian':
+				$path = './assets/uraian/';
+				break;
+		}
+
+		$file = @$_FILES['file'];
+		
+		if (isset($file["type"])) {
+
+			$validextensions = array("jpeg", "jpg", "png");
+			$temporary = explode(".", $_FILES["file"]["name"]);
+			$file_extension = end($temporary);
+
+			if ((($_FILES["file"]["type"] == "image/png") || ($_FILES["file"]["type"] == "image/jpg") || ($_FILES["file"]["type"] == "image/jpeg")
+			) && ($_FILES["file"]["size"] < 2000000) && in_array($file_extension, $validextensions)) {
+				
+				if ($_FILES["file"]["error"] > 0) {  
+					
+					echo "Return Code: " . $_FILES["file"]["error"] . "<br/><br/>";
+
+				} else {
+
+					//random name
+					$type_arr = explode('/', $_FILES["file"]["type"]);
+					$new_name = md5($_FILES["file"]["name"].time()).'.'.$type_arr[1];
+					
+					if (file_exists($path. $new_name)) {
+						
+						//already exists.
+						$data = 1;
+						echo json_encode($data);
+
+					} else {
+						
+						$sourcePath = $_FILES['file']['tmp_name']; 
+						$targetPath = $path . $new_name;
+						move_uploaded_file($sourcePath, $targetPath);
+
+						$data = array(
+										'name' => $new_name,
+										'type' => $_FILES["file"]["type"],
+										'size' => $_FILES["file"]["size"] / 1024,
+									);
+
+						echo json_encode($data);
+					}
+				}
+
+			} else {
+
+				//***Invalid file Size or Type***
+				$data = 0;
+				echo json_encode($data);
+			}
+		}
+
+	}
+
+	function upload_delete($x){
+
+		$image = @$_POST['image'];
+
+		//target folder upload
+		switch ($x) {
+
+			case 'pilihan': 
+				$path = './assets/pilihan_ganda/'.$image;
+				break;
+			case 'uraian':
+				$path = './assets/uraian/'.$image;
+				break;
+		}
+
+		if(unlink($path)) {
+		     $result = 1;
+		}
+		else {
+		     $result = 0;
+		}
+
+		echo json_encode($result);
+	}
+
 	function post() {
 		$soal = $this->input->post('soal');
 		$name = $this->input->post('soal_nama');
 		$data = array(
-			'soal_nama' => $name,
+			'soal_nama' => $name, 
 			'soal_data' => serialize($soal),
 			'soal_diperbarui' => date('Y-m-d'),
 		);

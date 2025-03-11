@@ -1,7 +1,30 @@
+<style type="text/css">
+	.up{
+		background: indianred;
+    color: white;
+    padding: 3px;
+    border-width: 1px;
+    border-color: #999;
+    border-style: solid;
+    border-radius: 4px;
+    margin-top: 5px;
+	}
+	.up-1{
+		background: #17a2b8;
+    color: white;
+    padding: 3px;
+    border-width: 1px;
+    border-color: #999;
+    border-style: solid;
+    border-radius: 4px;
+    margin-top: 5px;
+	}
+</style>
+
 <header class="page-header">
   <div class="container-fluid">
     <h2 class="no-margin-bottom">Tambah Soal Uraian</h2>
-  </div>
+  </div> 
 </header>
 
 <div class="container mt-4">
@@ -28,6 +51,17 @@
 					<div class="form-group">
 						<label class="form-control-label"><b>[ NO : <?= $i ?> ]</b> PERTANYAAN</label>
 						<textarea placeholder="Masukkan pertanyaan" class="form-control" name="soal_uraian[<?= $i ?>][pertanyaan]"></textarea>
+
+						<!-- gambar -->
+						<input hidden type="text" class="gambar" name="soal_uraian[<?= $i ?>][gambar]">
+						<input id="img-soal<?= $i ?>" type="file" class="upload mt-2 w-25" style="display:none;">
+						<label class="up" for="img-soal<?= $i ?>">Upload image <i class="fa fa-upload"></i></label>
+
+						<button hidden type="button" class="view btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+						<button hidden type="button" class="del btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+						<br/><small class="message"></small>
+						<!-- gambar -->
+
 					</div>
 				<?php endfor ?>
 				<div class="line">
@@ -41,3 +75,119 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	
+//upload soal
+$(document).on('change', '.upload', function() {
+
+  var target = $(this);
+  var name = $(this).closest('div').find(".gambar");
+  var message = $(this).closest('div').find(".message");
+  message.empty();
+
+  //view + del
+  var view = $(this).closest('div').find(".view");
+  var del = $(this).closest('div').find(".del");
+
+  var file = this.files[0];
+  var imagefile = file.type;
+  var match= ["image/jpeg","image/png","image/jpg"];
+
+  if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+    
+    target.val('');
+    message.html("<span style='color:red;'>Please Select A valid Image File</span>");
+    return false;
+  
+  }else{
+
+    var x = 'uraian';
+    var file_data = target.prop('files')[0];   
+    var form_data = new FormData();                  
+    form_data.append('file', file_data);
+
+    $.ajax({
+        url: '<?=base_url('soal/upload/')?>'+x, 
+        dataType: 'json', 
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form_data,                         
+        type: 'post',
+        success: function(response){
+
+            message.html('loading');
+
+            if (response == 0) {
+              target.val('');
+              name.val('');
+              message.html("<span style='color:red;'>Invalid file Size, Max 2MB</span>");
+            }
+            if (response == 1) {
+              target.val('');
+              name.val('');
+              message.html("<span style='color:red;'>File Already Exists</span>");
+            }
+            if (response != 0 && response != 1) {
+              name.val(response['name']);
+              message.html("<span style='color:green;'>Success Upload</span>");
+
+              view.removeAttr('hidden');
+              del.removeAttr('hidden');
+            }
+           
+        }
+     });
+  }  
+
+});
+
+
+$(document).on('click', '.del', function() {
+
+	var target = $(this);
+  var name = $(this).closest('div').find(".gambar");
+  var message = $(this).closest('div').find(".message");
+  message.empty();
+
+  //view + del
+  var view = $(this).closest('div').find(".view");
+  var del = $(this).closest('div').find(".del");
+
+  $.ajax({
+  	url: '<?=base_url('soal/upload_delete/uraian')?>',
+  	type: 'POST',
+  	dataType: 'json',
+  	data: {image: name.val()},
+  })
+  .done(function(response) {
+  	
+  	if (response == 1) {
+
+  		message.html('<span style="color:green;">Deleted Successfully</span>');
+  		view.attr('hidden', 'true');
+    	del.attr('hidden', 'true');
+    	name.val('');
+
+  	}else{
+
+  		message.html('<span style="color:red;">Errors Occured</span>');
+  	}
+
+  });
+  
+
+});
+
+$(document).on('click', '.view', function() {
+
+	var image = $(this).closest('div').find(".gambar").val();
+
+  if (image != '') {
+  	 window.open('<?=base_url('assets/uraian/')?>'+image, '_blank')
+  }
+
+});
+
+</script>

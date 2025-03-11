@@ -6,7 +6,7 @@ td {
 <div class="d-block" id="head-soal">
 	<div class="d-block" align="center">
 		<h3><?php echo $soal->soal_nama ?></h3>
-		
+		 
 	</div>
 	<form method="post" id="form" action="<?php echo base_url("soal/post") ?>">
 		<div class="pt-4">
@@ -24,7 +24,10 @@ td {
 		<?php foreach (unserialize($soal->soal_data) as $key => $var): ?>
 			<tr>
 				<td><p><?php echo $key ?>.</p></td>
-				<td><p><?php echo str_replace(PHP_EOL, "<br>", $var['pertanyaan'] )?></p></td>
+				<td>
+					<p><?php echo str_replace(PHP_EOL, "<br>", $var['pertanyaan'] )?></p>
+					<img <?=(@$var['gambar'] == '')? 'hidden':''?> src="<?=base_url('admin/assets/pilihan_ganda/'.@$var['gambar'])?>" class="img img-thumbnail w-50 mb-3">
+				</td>
 			</tr>
 			<tr>
 				<td></td>
@@ -35,25 +38,37 @@ td {
 								<td>
 									<p class="mr-2"><input required="" type="radio" value="a" name="jawaban[<?php echo($key) ?>]"> </p>
 								</td>
-								<td><?php echo $var['a'] ?></td>
+								<td>
+									<p><?php echo $var['a'] ?></p>
+									<img <?=(@$var['gambar_a'] == '')? 'hidden':''?> src="<?=base_url('admin/assets/pilihan_ganda/'.@$var['gambar_a'])?>" class="img img-thumbnail w-25 mb-3">		
+								</td>
 							</tr>
 							<tr>
 								<td>
 									<p><input required="" type="radio" value="b" name="jawaban[<?php echo($key) ?>]"> </p>
 								</td>
-								<td><?php echo $var['b'] ?></td>
+								<td>
+									<p><?php echo $var['b'] ?></p>
+									<img <?=(@$var['gambar_b'] == '')? 'hidden':''?> src="<?=base_url('admin/assets/pilihan_ganda/'.@$var['gambar_b'])?>" class="img img-thumbnail w-25 mb-3">		
+								</td>
 							</tr>
 							<tr>
 								<td>
 									<p><input required="" type="radio" value="c" name="jawaban[<?php echo($key) ?>]"> </p>
 								</td>
-								<td><?php echo $var['c'] ?></td>
+								<td>
+									<p><?php echo $var['c'] ?></p>
+									<img <?=(@$var['gambar_c'] == '')? 'hidden':''?> src="<?=base_url('admin/assets/pilihan_ganda/'.@$var['gambar_c'])?>" class="img img-thumbnail w-25 mb-3">		
+								</td>
 							</tr>
 							<tr>
 								<td>
 									<p><input required="" type="radio" value="d" name="jawaban[<?php echo($key) ?>]"> </p>
 								</td>
-								<td><?php echo $var['d'] ?></td>
+								<td>
+									<p><?php echo $var['d'] ?></p>
+									<img <?=(@$var['gambar_d'] == '')? 'hidden':''?> src="<?=base_url('admin/assets/pilihan_ganda/'.@$var['gambar_d'])?>" class="img img-thumbnail w-25 mb-3">		
+								</td>
 							</tr>
 						</table>
 					</fieldset>
