@@ -20,6 +20,9 @@ td {
 			</div>
 			<hr>
 		</div>
+
+		<div hidden class="soal">
+
 		<table>
 		<?php foreach (unserialize($soal->soal_uraian_data) as $key => $var): ?>
 			<tr>
@@ -42,6 +45,9 @@ td {
 			<button type="submit" class="btn btn-primary">Submit</button>
 			<button type="reset" class="btn btn-danger">Reset</button>
 		</div>
+
+		</div>
+
 	</form>
 </div>
 <script type="text/javascript">
@@ -67,6 +73,9 @@ td {
 						}
 					}
 				});
+
+				$('.soal').removeAttr('hidden');
+
 			} else {
 				alert("id siswa tidak ditemukan !");
 			}

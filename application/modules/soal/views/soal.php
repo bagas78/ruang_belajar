@@ -12,7 +12,9 @@ td {
 		<div class="pt-4">
 			<div class="input-group mb-3">
 			  <input type="hidden" name="soal_id" id="soal_id" value="<?php echo $soal->soal_id ?>">
+			  
 			  <input type="number" name="siswa_id" id="siswa_id" required="" class="form-control" placeholder="Masukkan nomor induk" aria-describedby="basic-addon2">
+			  
 			  <div class="input-group-append">
 			    <!-- <span class="input-group-text" id="basic-addon2">@example.com</span> -->
 			    <button type="button" class="input-group-text btn-info" id="btn-setel">Setel Nomor Induk</button>
@@ -20,6 +22,9 @@ td {
 			</div>
 			<hr>
 		</div>
+
+		<div class="soal" hidden>
+		
 		<table>
 		<?php foreach (unserialize($soal->soal_data) as $key => $var): ?>
 			<tr>
@@ -81,6 +86,9 @@ td {
 			<button type="submit" class="btn btn-primary">Submit</button>
 			<button type="reset" class="btn btn-danger">Reset</button>
 		</div>
+
+		</div>
+
 	</form>
 </div>
 <script type="text/javascript">
@@ -106,9 +114,13 @@ td {
 						}
 					}
 				});
+
+				$('.soal').removeAttr('hidden');
+
 			} else {
 				alert("id siswa tidak ditemukan !");
 			}
+
 		});
 	}
 
